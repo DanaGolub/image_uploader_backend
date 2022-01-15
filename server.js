@@ -10,7 +10,7 @@ const database = require('./database')
 const app = express()
 const upload = multer({ dest: 'images/'})
 
-app.use(express.static(__dirname, "build"))
+app.use(express.static(path.join(__dirname, "build")))
 
 app.get("/", (req, res) => {
     res.send("Hello!")
